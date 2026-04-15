@@ -22,7 +22,7 @@ jobs:
       matrix:
         os: [ubuntu-18.04, windows-latest, macos-latest]
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v6
         # Include all history and tags
         with:
           fetch-depth: 0
@@ -57,7 +57,7 @@ jobs:
     name: Build source distribution
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v6
         # Include all history and tags
         with:
           fetch-depth: 0
@@ -86,7 +86,7 @@ jobs:
           name: artifact
           path: dist
 
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v6
         if: github.event.action == 'workflow_dispatch'
         # Include all history and tags
         with:
