@@ -49,7 +49,7 @@ jobs:
           # Windows 2.7 wheels no longer can be built https://github.com/DataDog/dd-trace-py/pull/2344
           CIBW_SKIP: pp* cp27-win*
 
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v7
         with:
           path: ./wheelhouse/*.whl
 
@@ -72,7 +72,7 @@ jobs:
           pip install cython
           python setup.py sdist
 
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v7
         with:
           path: dist/*.tar.gz
 
